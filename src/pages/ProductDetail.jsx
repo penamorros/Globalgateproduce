@@ -40,6 +40,9 @@ import frozenMangoImage from '../assets/images/frozenmango.png'
 import frozenPineappleImage from '../assets/images/Frozenpineapple.png'
 import frozenPapayaImage from '../assets/images/Frozenpapaya.png'
 import frozenFruitsImage from '../assets/images/Frozenfruits.png'
+import avocadoPulpImage from '../assets/images/Avocadopulpbags.jpeg'
+import avocadoHalvesImage from '../assets/images/Avocadohalves.jpeg'
+import dicedAvocadosImage from '../assets/images/Dicedavocados.jpeg'
 
 // Check icon
 const CheckIcon = () => (
@@ -137,14 +140,18 @@ const PRODUCTS_DATA = {
     name: { en: 'Zavaya Frozen Program', es: 'Programa Congelado Zavaya' },
     image: frozenFruitBowlImage,
     cubeImages: {
+      Avocado: dicedAvocadosImage,
       Mango: frozenMangoImage,
       Papaya: frozenPapayaImage,
       Pineapple: frozenPineappleImage,
       Mixed: frozenFruitsImage,
     },
+    halvesImages: {
+      Avocado: avocadoHalvesImage,
+    },
     description: {
-      en: 'Comprehensive frozen fruit program including IQF products and cubes. Ideal for foodservice and manufacturing.',
-      es: 'Programa integral de frutas congeladas incluyendo productos IQF y cubos. Ideal para foodservice y manufactura.',
+      en: 'Comprehensive frozen fruit program including avocado cubes, avocado halves, IQF products, and more. Ideal for foodservice and manufacturing.',
+      es: 'Programa integral de frutas congeladas incluyendo cubos de aguacate, mitades de aguacate, productos IQF y más. Ideal para foodservice y manufactura.',
     },
     origin: ['Mexico'],
     seasonality: { en: 'Year-round', es: 'Todo el año' },
@@ -163,8 +170,8 @@ const PRODUCTS_DATA = {
     imagePosition: '70% 85%',
     imageMaxW: '85%',
     description: {
-      en: 'Fruit pulps for foodservice, retail, and manufacturing. Multiple SKUs and flavor profiles available.',
-      es: 'Pulpas de frutas para foodservice, retail y manufactura. Múltiples SKUs y perfiles de sabor disponibles.',
+      en: 'Fruit pulps including avocado, mango, and tropical flavors for foodservice, retail, and manufacturing. Multiple SKUs and flavor profiles available.',
+      es: 'Pulpas de frutas incluyendo aguacate, mango y sabores tropicales para foodservice, retail y manufactura. Múltiples SKUs y perfiles de sabor disponibles.',
     },
     origin: ['Mexico'],
     seasonality: { en: 'Year-round', es: 'Todo el año' },
@@ -177,6 +184,7 @@ const PRODUCTS_DATA = {
     type: 'pulp',
     hasPulpFlavors: true,
     pulpFlavors: [
+      { name: { en: 'Avocado', es: 'Aguacate' }, image: avocadoPulpImage },
       { name: { en: 'Mango', es: 'Mango' }, image: mangoPulpImage },
       { name: { en: 'Passion Fruit', es: 'Maracuyá' }, image: passionfruitPulpImage },
       { name: { en: 'Guava', es: 'Guayaba' }, image: guavaPulpImage },
@@ -244,7 +252,7 @@ function PulpFlavorsGrid({ flavors, language }) {
           {title}
         </Text>
       </HStack>
-      <SimpleGrid columns={{ base: 2, md: 4 }} spacing={5} justifyItems="center">
+      <SimpleGrid columns={{ base: 2, md: 3, lg: 5 }} spacing={5} justifyItems="center">
         {flavors.map((flavor) => (
           <Box
             key={flavor.name.en}
@@ -299,7 +307,7 @@ function PulpFlavorsGrid({ flavors, language }) {
 
 // Frozen Cubes section
 function CubesSection({ language, cubeImages }) {
-  const cubes = ['Mango', 'Papaya', 'Pineapple', 'Mixed']
+  const cubes = ['Avocado', 'Mango', 'Papaya', 'Pineapple', 'Mixed']
   return (
     <Box mt={8} p={6} bg="neutral.cream" border="1px solid" borderColor="neutral.border">
       <Heading
@@ -318,7 +326,7 @@ function CubesSection({ language, cubeImages }) {
           ? 'Pre-cut fruit cubes for foodservice and manufacturing. Consistent sizing for easy portioning.'
           : 'Cubos de fruta pre-cortados para foodservice y manufactura. Tamaño consistente para porcionado fácil.'}
       </Text>
-      <SimpleGrid columns={{ base: 2, md: 4 }} spacing={4}>
+      <SimpleGrid columns={{ base: 2, md: 3, lg: 5 }} spacing={4}>
         {cubes.map((fruit) => {
           const img = cubeImages?.[fruit]
           return (
@@ -367,6 +375,72 @@ function CubesSection({ language, cubeImages }) {
                 textAlign="center"
               >
                 {fruit} Cubes
+              </Box>
+            </Box>
+          )
+        })}
+      </SimpleGrid>
+    </Box>
+  )
+}
+
+function HalvesSection({ language, halvesImages }) {
+  const items = Object.keys(halvesImages || {})
+  if (!items.length) return null
+
+  return (
+    <Box mt={8} p={6} bg="neutral.cream" border="1px solid" borderColor="neutral.border">
+      <Heading
+        as="h3"
+        fontSize="lg"
+        fontFamily="'Bebas Neue', 'Oswald', sans-serif"
+        fontWeight="400"
+        letterSpacing="0.05em"
+        color="brand.primary"
+        mb={4}
+      >
+        {language === 'en' ? 'FROZEN HALVES' : 'MITADES CONGELADAS'}
+      </Heading>
+      <Text fontSize="sm" color="neutral.stone" mb={4}>
+        {language === 'en'
+          ? 'Vacuum-sealed avocado halves, individually quick frozen for maximum freshness and shelf life.'
+          : 'Mitades de aguacate selladas al vacío, congeladas individualmente para máxima frescura y vida útil.'}
+      </Text>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
+        {items.map((fruit) => {
+          const img = halvesImages[fruit]
+          return (
+            <Box
+              key={fruit}
+              h={{ base: '180px', md: '220px' }}
+              bg="white"
+              border="1px solid"
+              borderColor="neutral.border"
+              overflow="hidden"
+              position="relative"
+            >
+              <Box
+                as="img"
+                src={img}
+                alt={`${fruit} halves`}
+                w="100%"
+                h="100%"
+                objectFit="cover"
+              />
+              <Box
+                position="absolute"
+                bottom={0}
+                left={0}
+                right={0}
+                bg="blackAlpha.700"
+                color="white"
+                fontSize="xs"
+                fontWeight="600"
+                py={1}
+                px={2}
+                textAlign="center"
+              >
+                {fruit} {language === 'en' ? 'Halves' : 'Mitades'}
               </Box>
             </Box>
           )
@@ -568,6 +642,9 @@ function ProductDetail({ slug }) {
               
               {/* Frozen-specific: Cubes section */}
               {product.hasCubes && <CubesSection language={language} cubeImages={product.cubeImages} />}
+              
+              {/* Frozen-specific: Halves section */}
+              {product.halvesImages && <HalvesSection language={language} halvesImages={product.halvesImages} />}
             </Box>
           </Container>
         </Box>

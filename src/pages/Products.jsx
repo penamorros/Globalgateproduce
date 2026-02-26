@@ -79,7 +79,7 @@ const PRODUCT_CATEGORIES = [
   {
     id: 'frozen',
     name: { en: 'Zavaya Frozen', es: 'Zavaya Congelados' },
-    description: { en: 'Frozen program including cubes and IQF products.', es: 'Programa congelado incluyendo cubos y productos IQF.' },
+    description: { en: 'Avocado cubes, avocado halves, IQF fruits, and more.', es: 'Cubos de aguacate, mitades de aguacate, frutas IQF y más.' },
     origin: 'Mexico',
     category: 'processed',
     image: frozenFruitCratesImage,
@@ -88,7 +88,7 @@ const PRODUCT_CATEGORIES = [
   {
     id: 'pulp',
     name: { en: 'Zavaya Pulp', es: 'Pulpa Zavaya' },
-    description: { en: 'Fruit pulps for foodservice and retail. Multiple SKUs available.', es: 'Pulpas de frutas para foodservice y retail. Múltiples SKUs disponibles.' },
+    description: { en: 'Avocado, mango, and tropical fruit pulps for foodservice and retail.', es: 'Pulpas de aguacate, mango y frutas tropicales para foodservice y retail.' },
     origin: 'Mexico',
     category: 'processed',
     image: pulpBoxImage,
