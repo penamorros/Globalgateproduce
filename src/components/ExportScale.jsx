@@ -66,7 +66,7 @@ function ExportScale() {
           mb={8}
           position="relative"
           overflow="hidden"
-          h={{ base: '193px', md: '308px' }}
+          h={{ base: '193px', md: '420px' }}
           w="105%"
           mx="-2.5%"
         >
@@ -77,7 +77,7 @@ function ExportScale() {
             w="100%"
             h="100%"
             objectFit="cover"
-            objectPosition="center 60%"
+            objectPosition={{ base: 'center 60%', md: 'center 15%' }}
           />
         </Box>
 
