@@ -110,7 +110,7 @@ function ContactForm() {
 
             {/* Contact Cards */}
             <VStack spacing={6} align="stretch">
-              {/* Marie Leal */}
+              {/* Mariel Leal */}
               <HStack
                 spacing={4}
                 p={4}
@@ -122,13 +122,13 @@ function ContactForm() {
               >
                 <Image
                   src={marieImage}
-                  alt="Marie Leal"
+                  alt="Mariel Leal"
                   boxSize="60px"
                   objectFit="cover"
                   borderRadius="sm"
                 />
                 <VStack align="flex-start" spacing={1}>
-                  <Text fontWeight="600" color="neutral.charcoal">Marie Leal</Text>
+                  <Text fontWeight="600" color="neutral.charcoal">Mariel Leal</Text>
                   <Text fontSize="sm" color="accent.leaf">{t('contact.salesManager')}</Text>
                   <Link href="mailto:sales@globalgateproduce.com" fontSize="sm" color="neutral.stone" _hover={{ color: 'brand.forest' }}>
                     sales@globalgateproduce.com
