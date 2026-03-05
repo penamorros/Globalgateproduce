@@ -77,7 +77,7 @@ function ExportScale() {
             w="100%"
             h="100%"
             objectFit="cover"
-            objectPosition="center bottom"
+            objectPosition="center 65%"
           />
         </Box>
 
