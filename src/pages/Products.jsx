@@ -158,7 +158,7 @@ function Products() {
       
       <Box as="main" pt="72px">
         {/* Hero Section */}
-        <Box py={{ base: 16, md: 24 }} bg="brand.primary" color="white">
+        <Box py={{ base: 16, md: 24 }} bg="brand.primary" color="white" className="texture-green">
           <Container maxW="1200px" px={{ base: 4, md: 8 }}>
             <Box ref={headerRef} className="reveal" maxW="700px">
               <HStack spacing={3} mb={3}>
@@ -199,7 +199,7 @@ function Products() {
         </Box>
 
         {/* Fresh Produce Section */}
-        <Box py={{ base: 12, md: 16 }} bg="neutral.offwhite">
+        <Box py={{ base: 12, md: 16 }} bg="neutral.offwhite" className="texture-light">
           <Container maxW="1200px" px={{ base: 4, md: 8 }}>
             <HStack spacing={3} mb={8}>
               <Box w="24px" h="3px" bg="brand.green" />
@@ -289,7 +289,7 @@ function Products() {
         </Box>
 
         {/* Processed Products Section */}
-        <Box py={{ base: 12, md: 16 }} bg="neutral.cream">
+        <Box py={{ base: 12, md: 16 }} bg="neutral.cream" className="texture-light">
           <Container maxW="1200px" px={{ base: 4, md: 8 }}>
             <HStack spacing={3} mb={8}>
               <Box w="24px" h="3px" bg="brand.orange" />

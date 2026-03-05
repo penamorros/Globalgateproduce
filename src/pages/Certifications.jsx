@@ -117,7 +117,7 @@ function Certifications() {
       
       <Box as="main" pt="72px">
         {/* Hero Section - Forest Green */}
-        <Box py={{ base: 16, md: 24 }} bg="brand.forest" color="white">
+        <Box py={{ base: 16, md: 24 }} bg="brand.forest" color="white" className="texture-green">
           <Container maxW="1200px" px={{ base: 4, md: 8 }}>
             <Box ref={headerRef} className="reveal" maxW="700px">
               <HStack spacing={3} mb={3}>
@@ -148,7 +148,7 @@ function Certifications() {
         </Box>
 
         {/* Intro Section */}
-        <Box py={{ base: 12, md: 16 }} bg="neutral.cream">
+        <Box py={{ base: 12, md: 16 }} bg="neutral.cream" className="texture-light">
           <Container maxW="1200px" px={{ base: 4, md: 8 }}>
             <Box ref={contentRef} className="reveal" maxW="800px">
               <Heading
@@ -177,7 +177,7 @@ function Certifications() {
         </Box>
 
         {/* Certifications Grid */}
-        <Box py={{ base: 12, md: 16 }} bg="neutral.offwhite">
+        <Box py={{ base: 12, md: 16 }} bg="neutral.offwhite" className="texture-light">
           <Container maxW="1200px" px={{ base: 4, md: 8 }}>
             <HStack spacing={3} mb={8}>
               <Box w="24px" h="3px" bg="brand.forest" />
@@ -203,7 +203,7 @@ function Certifications() {
         </Box>
 
         {/* Request Documentation CTA */}
-        <Box py={{ base: 12, md: 16 }} bg="neutral.cream">
+        <Box py={{ base: 12, md: 16 }} bg="neutral.cream" className="texture-light">
           <Container maxW="1200px" px={{ base: 4, md: 8 }}>
             <VStack spacing={6} align="center" textAlign="center">
               <Text fontSize="md" color="neutral.stone" maxW="500px">

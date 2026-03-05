@@ -475,7 +475,7 @@ function ProductDetail({ slug }) {
       
       <Box as="main" pt="72px">
         {/* Hero Section - Zavaya magenta */}
-        <Box py={{ base: 12, md: 16 }} bg="brand.primary" color="white">
+        <Box py={{ base: 12, md: 16 }} bg="brand.primary" color="white" className="texture-green">
           <Container maxW="1200px" px={{ base: 4, md: 8 }}>
             <Button
               as={RouterLink}
@@ -522,7 +522,7 @@ function ProductDetail({ slug }) {
         </Box>
 
         {/* Main Content */}
-        <Box py={{ base: 12, md: 16 }} bg="neutral.offwhite">
+        <Box py={{ base: 12, md: 16 }} bg="neutral.offwhite" className="texture-light">
           <Container maxW="1200px" px={{ base: 4, md: 8 }}>
             <Box ref={contentRef} className="reveal">
               <Flex direction={{ base: 'column', lg: 'row' }} gap={{ base: 8, lg: 12 }}>
@@ -650,7 +650,7 @@ function ProductDetail({ slug }) {
         </Box>
         
         {/* Placeholder note */}
-        <Box py={4} bg="neutral.cream">
+        <Box py={4} bg="neutral.cream" className="texture-light">
           <Container maxW="1200px" px={{ base: 4, md: 8 }}>
             <Text fontSize="xs" color="neutral.stone" textAlign="center" fontStyle="italic">
               {t('exportScale.placeholderNote')}
