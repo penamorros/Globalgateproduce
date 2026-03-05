@@ -18,7 +18,7 @@ import {
 } from '@chakra-ui/react'
 import { Link as RouterLink } from 'react-router-dom'
 
-import heroImage from '../assets/images/fruit-platter.jpg'
+import heroImage from '../assets/images/hero-avocado-large.png'
 import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
 
@@ -141,26 +141,19 @@ function Hero() {
             className="reveal"
             flex="1"
             w={{ base: '100%', lg: 'auto' }}
-            maxW={{ base: '500px', lg: 'none' }}
+            maxW={{ base: '400px', lg: '500px' }}
             position="relative"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
           >
-            <Box
-              position="absolute"
-              top="-10px"
-              right="-10px"
-              bottom="10px"
-              left="10px"
-              border="2px solid"
-              borderColor="accent.leaf"
-              opacity="0.3"
-              display={{ base: 'none', lg: 'block' }}
-            />
             <Image
               src={heroImage}
-              alt="Fresh exotic fruits including dragon fruit, blueberries, and more"
-              objectFit="cover"
+              alt="Premium Hass avocado cut in half with seed and leaves"
+              objectFit="contain"
               w="100%"
-              h={{ base: '280px', md: '360px', lg: '440px' }}
+              maxH={{ base: '300px', md: '400px', lg: '460px' }}
+              filter="drop-shadow(0 20px 40px rgba(0,0,0,0.3))"
               position="relative"
               zIndex="1"
             />
