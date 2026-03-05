@@ -52,7 +52,7 @@ const MapPinIcon = () => (
 )
 
 function ContactForm() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const headerRef = useReveal()
   const formRef = useReveal({ delay: 100 })
   const toast = useToast()
@@ -62,17 +62,37 @@ function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
+    const formData = new FormData(e.target)
+    formData.append('form-name', 'contact')
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      })
+
+      if (response.ok) {
+        toast({
+          title: t('contact.form.success'),
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+        })
+        e.target.reset()
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch {
       toast({
-        title: t('contact.form.success'),
-        status: 'success',
+        title: language === 'en' ? 'Something went wrong. Please try again.' : 'Algo salió mal. Por favor intenta de nuevo.',
+        status: 'error',
         duration: 5000,
         isClosable: true,
       })
-      e.target.reset()
-    }, 1000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -195,12 +215,20 @@ function ContactForm() {
           <Box ref={formRef} className="reveal">
             <Box
               as="form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               bg="white"
               p={{ base: 6, md: 8 }}
               border="1px solid"
               borderColor="neutral.border"
             >
+              <input type="hidden" name="form-name" value="contact" />
+              <p style={{ display: 'none' }}>
+                <label>Don't fill this out: <input name="bot-field" /></label>
+              </p>
               <VStack spacing={5}>
                 <FormControl isRequired>
                   <FormLabel fontSize="sm" fontWeight="600" color="neutral.charcoal">
