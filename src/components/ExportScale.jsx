@@ -66,6 +66,7 @@ function ExportScale() {
           mb={8}
           position="relative"
           overflow="hidden"
+          h={{ base: '250px', md: '420px' }}
           w="105%"
           mx="-2.5%"
         >
@@ -74,7 +75,9 @@ function ExportScale() {
             src={boxesOnFloorImage}
             alt="Zavaya export-ready packaging"
             w="100%"
-            display="block"
+            h="100%"
+            objectFit="cover"
+            objectPosition="center bottom"
           />
         </Box>
 
