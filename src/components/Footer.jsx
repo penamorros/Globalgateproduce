@@ -35,6 +35,7 @@ export function Tagline() {
   
   return (
     <Box
+      className="texture-green"
       py={{ base: 16, md: 20 }}
       bg={bgColor}
       position="relative"
@@ -89,6 +90,7 @@ function Footer() {
   return (
     <Box
       as="footer"
+      className="texture-green"
       py={{ base: 12, md: 16 }}
       bg={footerBg}
       color="white"

@@ -53,7 +53,7 @@ function Capabilities() {
   ]
 
   return (
-    <Box as="section" id="about" py={{ base: 16, md: 24 }} bg="neutral.cream">
+    <Box as="section" id="about" className="texture-light" py={{ base: 16, md: 24 }} bg="neutral.cream">
       <Container maxW="1200px" px={{ base: 4, md: 8 }}>
         {/* Section Header */}
         <Box ref={headerRef} className="reveal" mb={{ base: 10, md: 14 }}>

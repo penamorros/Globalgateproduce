@@ -63,7 +63,7 @@ function ZavayaCarousel() {
   }, [isPaused, next])
 
   return (
-    <Box as="section" py={{ base: 14, md: 20 }} bg="brand.forest" position="relative" overflow="hidden">
+    <Box as="section" className="texture-green" py={{ base: 14, md: 20 }} bg="brand.forest" position="relative" overflow="hidden">
       <Container maxW="1200px" px={{ base: 4, md: 8 }}>
         <Box ref={headerRef} className="reveal" mb={{ base: 8, md: 10 }} textAlign="center">
           <HStack spacing={3} justify="center" mb={3}>

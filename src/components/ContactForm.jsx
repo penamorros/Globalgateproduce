@@ -96,7 +96,7 @@ function ContactForm() {
   }
 
   return (
-    <Box as="section" id="contact" py={{ base: 16, md: 24 }} bg="neutral.cream">
+    <Box as="section" id="contact" className="texture-light" py={{ base: 16, md: 24 }} bg="neutral.cream">
       <Container maxW="1200px" px={{ base: 4, md: 8 }}>
         <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 12, lg: 16 }}>
           {/* Left: Contact Info */}

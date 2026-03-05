@@ -143,35 +143,36 @@ function Hero() {
             ref={imageRef}
             className="reveal"
             flex="1"
-            w={{ base: '100%', lg: 'auto' }}
-            maxW={{ base: '420px', lg: '520px' }}
+            w="100%"
+            maxW={{ base: '320px', md: '400px', lg: '500px' }}
+            mx="auto"
             position="relative"
-            h={{ base: '320px', md: '400px', lg: '460px' }}
+            aspectRatio="1"
           >
-            {/* Decorative arc behind fruits */}
+            {/* Decorative rings */}
             <Box
               position="absolute"
               top="50%"
               left="50%"
               transform="translate(-50%, -50%)"
-              w={{ base: '280px', md: '360px', lg: '420px' }}
-              h={{ base: '280px', md: '360px', lg: '420px' }}
+              w="75%"
+              h="75%"
               borderRadius="full"
               border="2px solid"
               borderColor="accent.leaf"
-              opacity="0.25"
+              opacity="0.2"
             />
             <Box
               position="absolute"
               top="50%"
               left="50%"
-              transform="translate(-50%, -50%) rotate(15deg)"
-              w={{ base: '310px', md: '390px', lg: '460px' }}
-              h={{ base: '310px', md: '390px', lg: '460px' }}
+              transform="translate(-50%, -50%) rotate(20deg)"
+              w="88%"
+              h="88%"
               borderRadius="full"
               border="1px solid"
               borderColor="brand.teal"
-              opacity="0.15"
+              opacity="0.12"
             />
             {/* Subtle glow */}
             <Box
@@ -179,12 +180,12 @@ function Hero() {
               top="50%"
               left="50%"
               transform="translate(-50%, -50%)"
-              w={{ base: '200px', md: '260px', lg: '300px' }}
-              h={{ base: '200px', md: '260px', lg: '300px' }}
+              w="55%"
+              h="55%"
               borderRadius="full"
               bg="accent.leaf"
-              opacity="0.06"
-              filter="blur(60px)"
+              opacity="0.07"
+              filter="blur(50px)"
             />
 
             {/* Main avocado - center */}
@@ -195,9 +196,9 @@ function Hero() {
               top="50%"
               left="50%"
               transform="translate(-50%, -50%)"
-              w={{ base: '220px', md: '280px', lg: '340px' }}
+              w="65%"
               objectFit="contain"
-              filter="drop-shadow(0 15px 30px rgba(0,0,0,0.35))"
+              filter="drop-shadow(0 12px 28px rgba(0,0,0,0.35))"
               zIndex="3"
             />
 
@@ -206,11 +207,11 @@ function Hero() {
               src={heroDragonfruit}
               alt="Fresh dragon fruit"
               position="absolute"
-              top={{ base: '-5%', md: '-2%' }}
-              right={{ base: '0%', md: '2%' }}
-              w={{ base: '90px', md: '110px', lg: '130px' }}
+              top="2%"
+              right="5%"
+              w="24%"
               objectFit="contain"
-              filter="drop-shadow(0 10px 25px rgba(0,0,0,0.3))"
+              filter="drop-shadow(0 8px 20px rgba(0,0,0,0.3))"
               zIndex="2"
               transform="rotate(10deg)"
             />
@@ -220,11 +221,11 @@ function Hero() {
               src={heroMango}
               alt="Fresh mango sliced"
               position="absolute"
-              bottom={{ base: '5%', md: '8%' }}
-              right={{ base: '-2%', md: '0%' }}
-              w={{ base: '110px', md: '140px', lg: '160px' }}
+              bottom="8%"
+              right="2%"
+              w="30%"
               objectFit="contain"
-              filter="drop-shadow(0 10px 25px rgba(0,0,0,0.3))"
+              filter="drop-shadow(0 8px 20px rgba(0,0,0,0.3))"
               zIndex="4"
               transform="rotate(-5deg)"
             />
@@ -234,11 +235,11 @@ function Hero() {
               src={heroLime}
               alt="Fresh lime cut in half"
               position="absolute"
-              bottom={{ base: '2%', md: '5%' }}
-              left={{ base: '0%', md: '2%' }}
-              w={{ base: '100px', md: '120px', lg: '140px' }}
+              bottom="5%"
+              left="3%"
+              w="27%"
               objectFit="contain"
-              filter="drop-shadow(0 10px 25px rgba(0,0,0,0.3))"
+              filter="drop-shadow(0 8px 20px rgba(0,0,0,0.3))"
               zIndex="2"
               transform="rotate(8deg)"
             />

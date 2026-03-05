@@ -98,7 +98,7 @@ function ProductFocus() {
     : ['Mangos', 'Papayas', 'Limones', 'Arándanos', 'Congelados', 'Pulpa']
 
   return (
-    <Box as="section" id="products" py={{ base: 16, md: 24 }} bg="neutral.offwhite">
+    <Box as="section" id="products" className="texture-light" py={{ base: 16, md: 24 }} bg="neutral.offwhite">
       <Container maxW="1200px" px={{ base: 4, md: 8 }}>
         {/* Section Header */}
         <Box ref={headerRef} className="reveal" mb={{ base: 10, md: 14 }}>

@@ -16,6 +16,36 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Subtle tropical texture for green sections */
+.texture-green {
+  position: relative;
+}
+.texture-green::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 8c0 0 6 8 4 18s-8 12-14 6c0 0 2-10 10-18z' fill='%23fff'/%3E%3Cpath d='M60 50c0 0 6 8 4 18s-8 12-14 6c0 0 2-10 10-18z' fill='%23fff'/%3E%3Ccircle cx='55' cy='15' r='3' fill='%23fff'/%3E%3Ccircle cx='15' cy='65' r='2' fill='%23fff'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  z-index: 0;
+}
+
+/* Subtle botanical texture for light sections */
+.texture-light {
+  position: relative;
+}
+.texture-light::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 10c0 0 8 10 5 22s-10 14-18 8c0 0 3-12 13-22z' fill='%231B5E3B'/%3E%3Cpath d='M75 55c0 0 6 8 4 16s-8 11-14 6c0 0 2-9 10-16z' fill='%231B5E3B'/%3E%3Ccircle cx='65' cy='20' r='2.5' fill='%231B5E3B'/%3E%3Ccircle cx='10' cy='75' r='1.5' fill='%231B5E3B'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  z-index: 0;
+}
+
 /* Selection color - Zavaya magenta */
 ::selection {
   background-color: #942C6D;

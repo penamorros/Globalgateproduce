@@ -27,7 +27,7 @@ function ExportScale() {
   const containerRef = useReveal({ variant: 'image', delay: 100 })
 
   return (
-    <Box as="section" py={{ base: 16, md: 24 }} bg="neutral.offwhite" position="relative">
+    <Box as="section" className="texture-light" py={{ base: 16, md: 24 }} bg="neutral.offwhite" position="relative">
       <Container maxW="1200px" px={{ base: 4, md: 8 }}>
         {/* Section Header */}
         <Box ref={headerRef} className="reveal" mb={{ base: 10, md: 14 }} maxW="600px">

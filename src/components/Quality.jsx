@@ -51,7 +51,7 @@ function Quality() {
   ]
 
   return (
-    <Box as="section" id="quality" py={{ base: 16, md: 24 }} bg="brand.forest">
+    <Box as="section" id="quality" className="texture-green" py={{ base: 16, md: 24 }} bg="brand.forest">
       <Container maxW="1200px" px={{ base: 4, md: 8 }}>
         {/* Header */}
         <Box ref={headerRef} className="reveal" mb={{ base: 10, md: 14 }}>
