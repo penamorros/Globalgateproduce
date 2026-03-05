@@ -22,7 +22,7 @@ import Footer, { Tagline } from '../components/Footer'
 import { useLanguage } from '../context/LanguageContext'
 import { useReveal, useStaggerReveal } from '../hooks/useReveal'
 
-import hassCrateImage from '../assets/images/avocado-crates-real.jpeg'
+import hassCrateImage from '../assets/images/ZavayaHassAvocados.png'
 import dragonFruitCrateImage from '../assets/images/Dragonfruitcratered.png'
 import dragonFruitCrateYellowImage from '../assets/images/Dragonfruitcrateyellow.png'
 import lemonCrateImage from '../assets/images/Lemoncrate.jpeg'

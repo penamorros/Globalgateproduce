@@ -23,7 +23,7 @@ import { useReveal, useStaggerReveal } from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
 
 // Import product images
-import avocadoImage from '../assets/images/avocado-crates-real.jpeg'
+import avocadoImage from '../assets/images/ZavayaHassAvocados.png'
 import dragonFruitRedImage from '../assets/images/homepageReddragonfruitcrate.png'
 import dragonFruitYellowImage from '../assets/images/homepageyellowdragonfruitcrate.png'
 
