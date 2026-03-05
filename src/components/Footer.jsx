@@ -75,7 +75,7 @@ function Footer() {
 
   // Check if we're on products page
   const isProductsPage = location.pathname === '/products' || location.pathname.startsWith('/products/')
-  const footerBg = isProductsPage ? 'brand.primary' : 'brand.forestDark'
+  const footerBg = isProductsPage ? 'brand.primary' : 'brand.forest'
   const accentColor = isProductsPage ? 'brand.teal' : 'accent.leaf'
 
   const FOOTER_LINKS = [
@@ -109,7 +109,7 @@ function Footer() {
               {isProductsPage ? (
                 <ZavayaLogo height={{ base: '52px', md: '64px' }} />
               ) : (
-                <Box bg="brand.forestDark" borderRadius="md" overflow="hidden">
+                <Box bg="brand.forest" borderRadius="md" overflow="hidden">
                   <ZavayaLogo 
                     height={{ base: '52px', md: '64px' }} 
                     filter="grayscale(1) contrast(5)"
