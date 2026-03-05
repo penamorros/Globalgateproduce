@@ -35,6 +35,7 @@ function Hero() {
   return (
     <Box
       as="section"
+      className="texture-green"
       pt={{ base: '72px', md: '72px' }}
       bg="brand.forest"
       position="relative"

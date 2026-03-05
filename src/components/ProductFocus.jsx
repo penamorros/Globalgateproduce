@@ -98,14 +98,14 @@ function ProductFocus() {
     : ['Mangos', 'Papayas', 'Limones', 'Arándanos', 'Congelados', 'Pulpa']
 
   return (
-    <Box as="section" id="products" className="texture-light" py={{ base: 16, md: 24 }} bg="neutral.offwhite">
+    <Box as="section" id="products" className="texture-green" py={{ base: 16, md: 24 }} bg="brand.forest">
       <Container maxW="1200px" px={{ base: 4, md: 8 }}>
         {/* Section Header */}
         <Box ref={headerRef} className="reveal" mb={{ base: 10, md: 14 }}>
           <Text
             fontSize="sm"
             fontWeight="600"
-            color="brand.forest"
+            color="accent.leaf"
             textTransform="uppercase"
             letterSpacing="0.15em"
             mb={3}
@@ -119,11 +119,11 @@ function ProductFocus() {
             fontWeight="400"
             mb={4}
             letterSpacing="0.02em"
-            color="neutral.charcoal"
+            color="white"
           >
             {t('products.title')}
           </Heading>
-          <Text fontSize="md" color="neutral.stone" lineHeight="1.7" maxW="550px">
+          <Text fontSize="md" color="whiteAlpha.800" lineHeight="1.7" maxW="550px">
             {t('products.description')}
           </Text>
         </Box>
@@ -228,18 +228,18 @@ function ProductFocus() {
 
         {/* Also Available Section */}
         <Box textAlign="center">
-          <Text fontSize="sm" color="neutral.stone" mb={4}>
+          <Text fontSize="sm" color="whiteAlpha.700" mb={4}>
             {t('products.alsoAvailable')}{' '}
-            <Text as="span" fontWeight="600" color="neutral.charcoal">
+            <Text as="span" fontWeight="600" color="white">
               {alsoAvailable.join(', ')}
             </Text>
           </Text>
           <Button
             as={RouterLink}
             to="/products"
-            bg="brand.forest"
-            color="white"
-            _hover={{ bg: 'brand.forestLight' }}
+            bg="white"
+            color="brand.forest"
+            _hover={{ bg: 'neutral.cream' }}
             size="md"
           >
             {t('products.viewAll')}
