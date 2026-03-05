@@ -18,7 +18,10 @@ import {
 } from '@chakra-ui/react'
 import { Link as RouterLink } from 'react-router-dom'
 
-import heroImage from '../assets/images/hero-avocado-large.png'
+import heroAvocado from '../assets/images/hero-avocado-large.png'
+import heroDragonfruit from '../assets/images/hero-dragonfruit.png'
+import heroMango from '../assets/images/hero-mango.png'
+import heroLime from '../assets/images/hero-lime.png'
 import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
 
@@ -135,27 +138,109 @@ function Hero() {
             </Text>
           </VStack>
 
-          {/* Hero Image */}
+          {/* Hero Image Composition */}
           <Box
             ref={imageRef}
             className="reveal"
             flex="1"
             w={{ base: '100%', lg: 'auto' }}
-            maxW={{ base: '400px', lg: '500px' }}
+            maxW={{ base: '420px', lg: '520px' }}
             position="relative"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
+            h={{ base: '320px', md: '400px', lg: '460px' }}
           >
+            {/* Decorative arc behind fruits */}
+            <Box
+              position="absolute"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -50%)"
+              w={{ base: '280px', md: '360px', lg: '420px' }}
+              h={{ base: '280px', md: '360px', lg: '420px' }}
+              borderRadius="full"
+              border="2px solid"
+              borderColor="accent.leaf"
+              opacity="0.25"
+            />
+            <Box
+              position="absolute"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -50%) rotate(15deg)"
+              w={{ base: '310px', md: '390px', lg: '460px' }}
+              h={{ base: '310px', md: '390px', lg: '460px' }}
+              borderRadius="full"
+              border="1px solid"
+              borderColor="brand.teal"
+              opacity="0.15"
+            />
+            {/* Subtle glow */}
+            <Box
+              position="absolute"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -50%)"
+              w={{ base: '200px', md: '260px', lg: '300px' }}
+              h={{ base: '200px', md: '260px', lg: '300px' }}
+              borderRadius="full"
+              bg="accent.leaf"
+              opacity="0.06"
+              filter="blur(60px)"
+            />
+
+            {/* Main avocado - center */}
             <Image
-              src={heroImage}
-              alt="Premium Hass avocado cut in half with seed and leaves"
+              src={heroAvocado}
+              alt="Premium Hass avocado"
+              position="absolute"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -50%)"
+              w={{ base: '220px', md: '280px', lg: '340px' }}
               objectFit="contain"
-              w="100%"
-              maxH={{ base: '300px', md: '400px', lg: '460px' }}
-              filter="drop-shadow(0 20px 40px rgba(0,0,0,0.3))"
-              position="relative"
-              zIndex="1"
+              filter="drop-shadow(0 15px 30px rgba(0,0,0,0.35))"
+              zIndex="3"
+            />
+
+            {/* Dragon fruit - top right */}
+            <Image
+              src={heroDragonfruit}
+              alt="Fresh dragon fruit"
+              position="absolute"
+              top={{ base: '-5%', md: '-2%' }}
+              right={{ base: '0%', md: '2%' }}
+              w={{ base: '90px', md: '110px', lg: '130px' }}
+              objectFit="contain"
+              filter="drop-shadow(0 10px 25px rgba(0,0,0,0.3))"
+              zIndex="2"
+              transform="rotate(10deg)"
+            />
+
+            {/* Mango - bottom right */}
+            <Image
+              src={heroMango}
+              alt="Fresh mango sliced"
+              position="absolute"
+              bottom={{ base: '5%', md: '8%' }}
+              right={{ base: '-2%', md: '0%' }}
+              w={{ base: '110px', md: '140px', lg: '160px' }}
+              objectFit="contain"
+              filter="drop-shadow(0 10px 25px rgba(0,0,0,0.3))"
+              zIndex="4"
+              transform="rotate(-5deg)"
+            />
+
+            {/* Lime - bottom left */}
+            <Image
+              src={heroLime}
+              alt="Fresh lime cut in half"
+              position="absolute"
+              bottom={{ base: '2%', md: '5%' }}
+              left={{ base: '0%', md: '2%' }}
+              w={{ base: '100px', md: '120px', lg: '140px' }}
+              objectFit="contain"
+              filter="drop-shadow(0 10px 25px rgba(0,0,0,0.3))"
+              zIndex="2"
+              transform="rotate(8deg)"
             />
           </Box>
         </Flex>
