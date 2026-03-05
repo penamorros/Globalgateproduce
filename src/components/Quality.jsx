@@ -51,16 +51,16 @@ function Quality() {
   ]
 
   return (
-    <Box as="section" id="quality" className="texture-green" py={{ base: 16, md: 24 }} bg="brand.forest">
+    <Box as="section" id="quality" className="texture-light" py={{ base: 16, md: 24 }} bg="neutral.cream">
       <Container maxW="1200px" px={{ base: 4, md: 8 }}>
         {/* Header */}
         <Box ref={headerRef} className="reveal" mb={{ base: 10, md: 14 }}>
           <HStack spacing={3} mb={3}>
-            <Box w="40px" h="3px" bg="accent.leaf" />
+            <Box w="40px" h="3px" bg="brand.forest" />
             <Text
               fontSize="sm"
               fontWeight="600"
-              color="accent.leaf"
+              color="brand.forest"
               textTransform="uppercase"
               letterSpacing="0.15em"
             >
@@ -74,11 +74,11 @@ function Quality() {
             fontWeight="400"
             mb={4}
             letterSpacing="0.02em"
-            color="white"
+            color="neutral.charcoal"
           >
             {t('quality.title')}
           </Heading>
-          <Text fontSize="md" color="whiteAlpha.800" lineHeight="1.7" maxW="600px">
+          <Text fontSize="md" color="neutral.stone" lineHeight="1.7" maxW="600px">
             {t('quality.description')}
           </Text>
         </Box>
@@ -91,11 +91,11 @@ function Quality() {
               ref={qualityRefs(index)}
               className="reveal"
               p={6}
-              bg="whiteAlpha.50"
+              bg="white"
               borderLeft="4px solid"
               borderLeftColor={ACCENT_COLORS[index % ACCENT_COLORS.length]}
               border="1px solid"
-              borderColor="whiteAlpha.100"
+              borderColor="neutral.border"
             >
               <Flex gap={4} align="flex-start">
                 <Box color={ACCENT_COLORS[index % ACCENT_COLORS.length]} flexShrink={0}>
@@ -105,13 +105,13 @@ function Quality() {
                   <Text
                     fontSize="md"
                     fontWeight="600"
-                    color="white"
+                    color="neutral.charcoal"
                     fontFamily="'Bebas Neue', 'Oswald', sans-serif"
                     letterSpacing="0.05em"
                   >
                     {point.title.toUpperCase()}
                   </Text>
-                  <Text fontSize="sm" color="whiteAlpha.700" lineHeight="1.7">
+                  <Text fontSize="sm" color="neutral.stone" lineHeight="1.7">
                     {point.description}
                   </Text>
                 </VStack>
