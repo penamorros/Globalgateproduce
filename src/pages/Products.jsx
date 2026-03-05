@@ -22,12 +22,12 @@ import Footer, { Tagline } from '../components/Footer'
 import { useLanguage } from '../context/LanguageContext'
 import { useReveal, useStaggerReveal } from '../hooks/useReveal'
 
-import hassCrateImage from '../assets/images/ZavayaHassAvocados.png'
-import dragonFruitCrateImage from '../assets/images/Dragonfruitcratered.png'
-import dragonFruitCrateYellowImage from '../assets/images/Dragonfruitcrateyellow.png'
+import hassCrateImage from '../assets/images/ZavayaHassAvocados.jpg'
+import dragonFruitCrateImage from '../assets/images/Dragonfruitcratered.jpg'
+import dragonFruitCrateYellowImage from '../assets/images/Dragonfruitcrateyellow.jpg'
 import lemonCrateImage from '../assets/images/Lemoncrate.jpeg'
-import blueberryCrateImage from '../assets/images/Blueberrycrate.png'
-import frozenFruitCratesImage from '../assets/images/frozenfruitcrates.png'
+import blueberryCrateImage from '../assets/images/Blueberrycrate.jpg'
+import frozenFruitCratesImage from '../assets/images/frozenfruitcrates.jpg'
 import pulpBoxImage from '../assets/images/Pulpbox.jpeg'
 
 // Zavaya accent colors for alternating borders

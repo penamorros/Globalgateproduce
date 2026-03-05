@@ -26,7 +26,7 @@ import { useState } from 'react'
 
 import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
-import marieImage from '../assets/images/Marieleal.png'
+import marieImage from '../assets/images/Marieleal.jpg'
 
 // Email icon
 const MailIcon = () => (

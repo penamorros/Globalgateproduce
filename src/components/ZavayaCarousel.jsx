@@ -11,11 +11,11 @@ import {
 import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
 
-import imgPackingLine from '../assets/images/Gemini_Generated_Image_swukbqswukbqswuk.png'
-import imgAutoStacking from '../assets/images/Gemini_Generated_Image_92m1et92m1et92m1.png'
-import imgTapingBox from '../assets/images/Gemini_Generated_Image_g5ex8ug5ex8ug5ex.png'
-import imgTruckLoading from '../assets/images/Gemini_Generated_Image_1xvuxn1xvuxn1xvu.png'
-import imgOpenPallet from '../assets/images/Gemini_Generated_Image_ze8vw5ze8vw5ze8v.png'
+import imgPackingLine from '../assets/images/Gemini_Generated_Image_swukbqswukbqswuk.jpg'
+import imgAutoStacking from '../assets/images/Gemini_Generated_Image_92m1et92m1et92m1.jpg'
+import imgTapingBox from '../assets/images/Gemini_Generated_Image_g5ex8ug5ex8ug5ex.jpg'
+import imgTruckLoading from '../assets/images/Gemini_Generated_Image_1xvuxn1xvuxn1xvu.jpg'
+import imgOpenPallet from '../assets/images/Gemini_Generated_Image_ze8vw5ze8vw5ze8v.jpg'
 
 const slides = [
   { src: imgPackingLine, alt: 'Zavaya worker inspecting branded avocado boxes on packing line' },

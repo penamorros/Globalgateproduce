@@ -23,9 +23,9 @@ import { useReveal, useStaggerReveal } from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
 
 // Import product images
-import avocadoImage from '../assets/images/ZavayaHassAvocados.png'
-import dragonFruitRedImage from '../assets/images/homepageReddragonfruitcrate.png'
-import dragonFruitYellowImage from '../assets/images/homepageyellowdragonfruitcrate.png'
+import avocadoImage from '../assets/images/ZavayaHassAvocados.jpg'
+import dragonFruitRedImage from '../assets/images/homepageReddragonfruitcrate.jpg'
+import dragonFruitYellowImage from '../assets/images/homepageyellowdragonfruitcrate.jpg'
 
 // Accent colors for bottom borders (forest green theme)
 const ACCENT_COLORS = ['accent.leaf', 'brand.teal', 'brand.green']

@@ -18,7 +18,7 @@ import {
 } from '@chakra-ui/react'
 import { Link as RouterLink } from 'react-router-dom'
 
-import heroImage from '../assets/images/fruit-platter.png'
+import heroImage from '../assets/images/fruit-platter.jpg'
 import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
 
