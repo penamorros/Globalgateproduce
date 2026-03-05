@@ -136,7 +136,7 @@ function ContactForm() {
                 </VStack>
               </HStack>
 
-              {/* Andrea Leal */}
+              {/* Sara Torres */}
               <HStack
                 spacing={4}
                 p={4}
@@ -156,13 +156,13 @@ function ContactForm() {
                   fontFamily="'Bebas Neue', 'Oswald', sans-serif"
                   fontSize="xl"
                 >
-                  AL
+                  ST
                 </Box>
                 <VStack align="flex-start" spacing={1}>
-                  <Text fontWeight="600" color="neutral.charcoal">Andrea Leal</Text>
+                  <Text fontWeight="600" color="neutral.charcoal">Sara Torres</Text>
                   <Text fontSize="sm" color="brand.teal">{t('contact.financeCeo')}</Text>
-                  <Link href="mailto:andrea@globalgateproduce.com" fontSize="sm" color="neutral.stone" _hover={{ color: 'brand.forest' }}>
-                    andrea@globalgateproduce.com
+                  <Link href="mailto:finance@globalgateproduce.com" fontSize="sm" color="neutral.stone" _hover={{ color: 'brand.forest' }}>
+                    finance@globalgateproduce.com
                   </Link>
                 </VStack>
               </HStack>

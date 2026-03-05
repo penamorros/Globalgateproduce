@@ -18,13 +18,14 @@ import imgTapingBox from '../assets/images/Gemini_Generated_Image_g5ex8ug5ex8ug5
 import imgWarehousePallet from '../assets/images/Gemini_Generated_Image_1mmwib1mmwib1mmw.png'
 import imgTruckLoading from '../assets/images/Gemini_Generated_Image_1xvuxn1xvuxn1xvu.png'
 import imgOpenPallet from '../assets/images/Gemini_Generated_Image_ze8vw5ze8vw5ze8v.png'
+import imgZavayaHass from '../assets/images/ZavayaHassAvocados.png'
 
 const slides = [
   { src: imgPackingLine, alt: 'Zavaya worker inspecting branded avocado boxes on packing line' },
-  { src: imgForkliftDock, alt: 'Forklift loading Zavaya pallets at shipping dock' },
+  { src: imgZavayaHass, alt: 'Zavaya branded Hass avocados in crates ready for export' },
   { src: imgAutoStacking, alt: 'Automated stacking of Zavaya avocado boxes in facility' },
   { src: imgTapingBox, alt: 'Worker taping Zavaya branded box for shipment' },
-  { src: imgWarehousePallet, alt: 'Zavaya avocado pallets staged in warehouse' },
+  { src: imgZavayaHass, alt: 'Zavaya Hass avocados with branded stickers in shipping boxes' },
   { src: imgTruckLoading, alt: 'Zavaya avocado pallets being loaded into refrigerated truck' },
   { src: imgOpenPallet, alt: 'Zavaya branded avocado boxes on pallet in warehouse' },
 ]

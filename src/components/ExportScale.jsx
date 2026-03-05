@@ -19,7 +19,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
 
-import boxesOnFloorImage from '../assets/images/Gemini_Generated_Image_86id7r86id7r86id.png'
+import boxesOnFloorImage from '../assets/images/ZavayaHassAvocados.png'
 
 function ExportScale() {
   const { t } = useLanguage()
