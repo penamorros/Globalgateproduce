@@ -140,111 +140,83 @@ function Hero() {
           </VStack>
 
           {/* Hero Image Composition */}
-          <Box
+          <Flex
             ref={imageRef}
             className="reveal"
             flex="1"
             w="100%"
-            maxW={{ base: '320px', md: '400px', lg: '500px' }}
+            maxW={{ base: '380px', md: '440px', lg: '520px' }}
             mx="auto"
+            justify="center"
+            align="center"
             position="relative"
-            aspectRatio="1"
+            py={{ base: 4, lg: 0 }}
           >
-            {/* Decorative rings */}
+            {/* Soft glow behind everything */}
             <Box
               position="absolute"
               top="50%"
               left="50%"
               transform="translate(-50%, -50%)"
-              w="75%"
-              h="75%"
+              w="70%"
+              h="70%"
               borderRadius="full"
-              border="2px solid"
-              borderColor="accent.leaf"
-              opacity="0.2"
-            />
-            <Box
-              position="absolute"
-              top="50%"
-              left="50%"
-              transform="translate(-50%, -50%) rotate(20deg)"
-              w="88%"
-              h="88%"
-              borderRadius="full"
-              border="1px solid"
-              borderColor="brand.teal"
-              opacity="0.12"
-            />
-            {/* Subtle glow */}
-            <Box
-              position="absolute"
-              top="50%"
-              left="50%"
-              transform="translate(-50%, -50%)"
-              w="55%"
-              h="55%"
-              borderRadius="full"
-              bg="accent.leaf"
-              opacity="0.07"
-              filter="blur(50px)"
+              bg="whiteAlpha.100"
+              filter="blur(60px)"
             />
 
-            {/* Main avocado - center */}
-            <Image
-              src={heroAvocado}
-              alt="Premium Hass avocado"
-              position="absolute"
-              top="50%"
-              left="50%"
-              transform="translate(-50%, -50%)"
-              w="65%"
-              objectFit="contain"
-              filter="drop-shadow(0 12px 28px rgba(0,0,0,0.35))"
-              zIndex="3"
-            />
-
-            {/* Dragon fruit - top right */}
+            {/* Dragon fruit - back left */}
             <Image
               src={heroDragonfruit}
               alt="Fresh dragon fruit"
               position="absolute"
-              top="2%"
-              right="5%"
-              w="24%"
+              top={{ base: '0%', lg: '-5%' }}
+              left={{ base: '2%', lg: '5%' }}
+              w={{ base: '80px', md: '100px', lg: '120px' }}
               objectFit="contain"
-              filter="drop-shadow(0 8px 20px rgba(0,0,0,0.3))"
-              zIndex="2"
-              transform="rotate(10deg)"
+              filter="drop-shadow(0 8px 24px rgba(0,0,0,0.3))"
+              zIndex="1"
+              transform="rotate(-8deg)"
             />
 
-            {/* Mango - bottom right */}
+            {/* Main avocado - center hero */}
             <Image
-              src={heroMango}
-              alt="Fresh mango sliced"
-              position="absolute"
-              bottom="8%"
-              right="2%"
-              w="30%"
+              src={heroAvocado}
+              alt="Premium Hass avocado"
+              w={{ base: '260px', md: '320px', lg: '380px' }}
               objectFit="contain"
-              filter="drop-shadow(0 8px 20px rgba(0,0,0,0.3))"
-              zIndex="4"
-              transform="rotate(-5deg)"
+              filter="drop-shadow(0 16px 40px rgba(0,0,0,0.35))"
+              zIndex="3"
+              position="relative"
             />
 
-            {/* Lime - bottom left */}
+            {/* Lime - bottom left, overlapping avocado */}
             <Image
               src={heroLime}
-              alt="Fresh lime cut in half"
+              alt="Fresh lime"
               position="absolute"
-              bottom="5%"
-              left="3%"
-              w="27%"
+              bottom={{ base: '0%', lg: '2%' }}
+              left={{ base: '8%', lg: '12%' }}
+              w={{ base: '90px', md: '105px', lg: '120px' }}
               objectFit="contain"
-              filter="drop-shadow(0 8px 20px rgba(0,0,0,0.3))"
-              zIndex="2"
-              transform="rotate(8deg)"
+              filter="drop-shadow(0 6px 18px rgba(0,0,0,0.3))"
+              zIndex="4"
             />
-          </Box>
+
+            {/* Mango - bottom right, overlapping avocado */}
+            <Image
+              src={heroMango}
+              alt="Fresh mango"
+              position="absolute"
+              bottom={{ base: '-2%', lg: '0%' }}
+              right={{ base: '5%', lg: '8%' }}
+              w={{ base: '100px', md: '120px', lg: '140px' }}
+              objectFit="contain"
+              filter="drop-shadow(0 6px 18px rgba(0,0,0,0.3))"
+              zIndex="4"
+              transform="rotate(-3deg)"
+            />
+          </Flex>
         </Flex>
       </Container>
 
