@@ -19,9 +19,6 @@ import {
 import { Link as RouterLink } from 'react-router-dom'
 
 import heroAvocado from '../assets/images/hero-avocado-large.png'
-import heroDragonfruit from '../assets/images/hero-dragonfruit.png'
-import heroMango from '../assets/images/hero-mango.png'
-import heroLime from '../assets/images/hero-lime.png'
 import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
 
@@ -139,82 +136,24 @@ function Hero() {
             </Text>
           </VStack>
 
-          {/* Hero Image Composition */}
+          {/* Hero Image */}
           <Flex
             ref={imageRef}
             className="reveal"
             flex="1"
             w="100%"
-            maxW={{ base: '380px', md: '440px', lg: '520px' }}
+            maxW={{ base: '300px', md: '380px', lg: '460px' }}
             mx="auto"
             justify="center"
             align="center"
-            position="relative"
             py={{ base: 4, lg: 0 }}
           >
-            {/* Soft glow behind everything */}
-            <Box
-              position="absolute"
-              top="50%"
-              left="50%"
-              transform="translate(-50%, -50%)"
-              w="70%"
-              h="70%"
-              borderRadius="full"
-              bg="whiteAlpha.100"
-              filter="blur(60px)"
-            />
-
-            {/* Dragon fruit - back left */}
-            <Image
-              src={heroDragonfruit}
-              alt="Fresh dragon fruit"
-              position="absolute"
-              top={{ base: '0%', lg: '-5%' }}
-              left={{ base: '2%', lg: '5%' }}
-              w={{ base: '80px', md: '100px', lg: '120px' }}
-              objectFit="contain"
-              filter="drop-shadow(0 8px 24px rgba(0,0,0,0.3))"
-              zIndex="1"
-              transform="rotate(-8deg)"
-            />
-
-            {/* Main avocado - center hero */}
             <Image
               src={heroAvocado}
               alt="Premium Hass avocado"
-              w={{ base: '260px', md: '320px', lg: '380px' }}
+              w="100%"
               objectFit="contain"
-              filter="drop-shadow(0 16px 40px rgba(0,0,0,0.35))"
-              zIndex="3"
-              position="relative"
-            />
-
-            {/* Lime - bottom left, overlapping avocado */}
-            <Image
-              src={heroLime}
-              alt="Fresh lime"
-              position="absolute"
-              bottom={{ base: '0%', lg: '2%' }}
-              left={{ base: '8%', lg: '12%' }}
-              w={{ base: '90px', md: '105px', lg: '120px' }}
-              objectFit="contain"
-              filter="drop-shadow(0 6px 18px rgba(0,0,0,0.3))"
-              zIndex="4"
-            />
-
-            {/* Mango - bottom right, overlapping avocado */}
-            <Image
-              src={heroMango}
-              alt="Fresh mango"
-              position="absolute"
-              bottom={{ base: '-2%', lg: '0%' }}
-              right={{ base: '5%', lg: '8%' }}
-              w={{ base: '100px', md: '120px', lg: '140px' }}
-              objectFit="contain"
-              filter="drop-shadow(0 6px 18px rgba(0,0,0,0.3))"
-              zIndex="4"
-              transform="rotate(-3deg)"
+              filter="drop-shadow(0 20px 50px rgba(0,0,0,0.4))"
             />
           </Flex>
         </Flex>
