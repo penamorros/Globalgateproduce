@@ -11,11 +11,11 @@ import {
 import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
 
-import imgPackingLine from '../assets/images/Gemini_Generated_Image_swukbqswukbqswuk.jpg'
-import imgAutoStacking from '../assets/images/Gemini_Generated_Image_92m1et92m1et92m1.jpg'
-import imgTapingBox from '../assets/images/Gemini_Generated_Image_g5ex8ug5ex8ug5ex.jpg'
-import imgTruckLoading from '../assets/images/Gemini_Generated_Image_1xvuxn1xvuxn1xvu.jpg'
-import imgOpenPallet from '../assets/images/Gemini_Generated_Image_ze8vw5ze8vw5ze8v.jpg'
+import imgPackingLine from '../assets/images/zavaya-carousel-1.webp'
+import imgAutoStacking from '../assets/images/zavaya-carousel-2.webp'
+import imgTapingBox from '../assets/images/zavaya-carousel-3.webp'
+import imgTruckLoading from '../assets/images/zavaya-carousel-4.webp'
+import imgOpenPallet from '../assets/images/zavaya-carousel-5.webp'
 
 const slides = [
   { src: imgPackingLine, alt: 'Zavaya worker inspecting branded avocado boxes on packing line' },
@@ -95,8 +95,8 @@ function ZavayaCarousel() {
           ref={carouselRef}
           className="reveal"
           position="relative"
-          mx="auto"
-          maxW="900px"
+          w="105%"
+          mx="-2.5%"
           role="group"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
