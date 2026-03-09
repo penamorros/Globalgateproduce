@@ -18,8 +18,7 @@ import { Link as RouterLink } from 'react-router-dom'
 
 import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
-
-import boxesOnFloorImage from '../assets/images/Gemini_Generated_Image_g5ex8ug5ex8ug5ex.jpg'
+import ZavayaCarousel from './ZavayaCarousel'
 
 function ExportScale() {
   const { t } = useLanguage()
@@ -59,26 +58,9 @@ function ExportScale() {
           </Text>
         </Box>
 
-        {/* Container Backdrop Image */}
-        <Box
-          ref={containerRef}
-          className="reveal"
-          mb={8}
-          position="relative"
-          overflow="hidden"
-          h={{ base: '250px', md: '420px' }}
-          w="105%"
-          mx="-2.5%"
-        >
-          <Box
-            as="img"
-            src={boxesOnFloorImage}
-            alt="Zavaya export-ready packaging"
-            w="100%"
-            h="100%"
-            objectFit="cover"
-            objectPosition="center 65%"
-          />
+        {/* Carousel replacing previous export image */}
+        <Box ref={containerRef} className="reveal" mb={8}>
+          <ZavayaCarousel embedded />
         </Box>
 
         {/* CTA */}

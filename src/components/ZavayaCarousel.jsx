@@ -37,7 +37,7 @@ const ChevronRight = () => (
   </svg>
 )
 
-function ZavayaCarousel() {
+function ZavayaCarousel({ embedded = false }) {
   const { t } = useLanguage()
   const headerRef = useReveal()
   const carouselRef = useReveal({ variant: 'image', delay: 100 })
@@ -61,6 +61,128 @@ function ZavayaCarousel() {
     const timer = setInterval(next, 5000)
     return () => clearInterval(timer)
   }, [isPaused, next])
+
+  if (embedded) {
+    return (
+      <Box
+        ref={carouselRef}
+        className="reveal"
+        position="relative"
+        w="105%"
+        mx="-2.5%"
+        role="group"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
+        <Box
+          position="relative"
+          overflow="hidden"
+          borderRadius="4px"
+          h={{ base: '300px', sm: '380px', md: '520px', lg: '580px' }}
+          bg="brand.forest"
+        >
+          {slides.map((slide, index) => (
+            <Box
+              key={index}
+              as="img"
+              src={slide.src}
+              alt={slide.alt}
+              position="absolute"
+              top="0"
+              left="0"
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              opacity={index === current ? 1 : 0}
+              transition="opacity 0.8s ease-in-out"
+              loading={index === 0 ? 'eager' : 'lazy'}
+            />
+          ))}
+
+          <Flex
+            position="absolute"
+            top="0"
+            left="0"
+            right="0"
+            bottom="0"
+            align="center"
+            justify="space-between"
+            px={{ base: 2, md: 4 }}
+            pointerEvents="none"
+          >
+            <Box
+              as="button"
+              onClick={prev}
+              p={2}
+              borderRadius="full"
+              bg="blackAlpha.500"
+              color="white"
+              _hover={{ bg: 'blackAlpha.700' }}
+              transition="all 0.2s"
+              opacity={{ base: 0.7, md: 0 }}
+              _groupHover={{ opacity: 1 }}
+              cursor="pointer"
+              aria-label="Previous image"
+              pointerEvents="auto"
+            >
+              <ChevronLeft />
+            </Box>
+            <Box
+              as="button"
+              onClick={next}
+              p={2}
+              borderRadius="full"
+              bg="blackAlpha.500"
+              color="white"
+              _hover={{ bg: 'blackAlpha.700' }}
+              transition="all 0.2s"
+              opacity={{ base: 0.7, md: 0 }}
+              _groupHover={{ opacity: 1 }}
+              cursor="pointer"
+              aria-label="Next image"
+              pointerEvents="auto"
+            >
+              <ChevronRight />
+            </Box>
+          </Flex>
+
+          <Text
+            position="absolute"
+            bottom={3}
+            right={4}
+            fontSize="xs"
+            color="whiteAlpha.800"
+            fontWeight="600"
+            letterSpacing="0.1em"
+            bg="blackAlpha.500"
+            px={2}
+            py={1}
+            borderRadius="2px"
+          >
+            {current + 1} / {slides.length}
+          </Text>
+        </Box>
+
+        <HStack spacing={2} justify="center" mt={5}>
+          {slides.map((_, index) => (
+            <Box
+              key={index}
+              as="button"
+              onClick={() => goTo(index)}
+              w={index === current ? '24px' : '8px'}
+              h="8px"
+              borderRadius="full"
+              bg={index === current ? 'accent.leaf' : 'whiteAlpha.400'}
+              transition="all 0.3s"
+              cursor="pointer"
+              _hover={{ bg: index === current ? 'accent.leaf' : 'whiteAlpha.600' }}
+              aria-label={`Go to image ${index + 1}`}
+            />
+          ))}
+        </HStack>
+      </Box>
+    )
+  }
 
   return (
     <Box as="section" className="texture-green" py={{ base: 14, md: 20 }} bg="brand.forest" position="relative" overflow="hidden">

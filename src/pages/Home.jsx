@@ -10,7 +10,6 @@ import { Box } from '@chakra-ui/react'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import ExportScale from '../components/ExportScale'
-import ZavayaCarousel from '../components/ZavayaCarousel'
 import Capabilities from '../components/Capabilities'
 import ProductFocus from '../components/ProductFocus'
 import Quality from '../components/Quality'
@@ -25,7 +24,6 @@ function Home() {
       <Box as="main">
         <Hero />
         <ExportScale />
-        <ZavayaCarousel />
         <Capabilities />
         <ProductFocus />
         <Quality />

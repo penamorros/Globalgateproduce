@@ -53,14 +53,14 @@ function Capabilities() {
   ]
 
   return (
-    <Box as="section" id="about" className="texture-light" py={{ base: 16, md: 24 }} bg="neutral.cream">
+    <Box as="section" id="about" className="texture-green" py={{ base: 16, md: 24 }} bg="brand.forest">
       <Container maxW="1200px" px={{ base: 4, md: 8 }}>
         {/* Section Header */}
         <Box ref={headerRef} className="reveal" mb={{ base: 10, md: 14 }}>
           <Text
             fontSize="sm"
             fontWeight="600"
-            color="brand.forest"
+            color="accent.leaf"
             textTransform="uppercase"
             letterSpacing="0.15em"
             mb={3}
@@ -74,11 +74,11 @@ function Capabilities() {
             fontWeight="400"
             mb={4}
             letterSpacing="0.02em"
-            color="neutral.charcoal"
+            color="white"
           >
             {t('capabilities.title')}
           </Heading>
-          <Text fontSize="md" color="neutral.stone" lineHeight="1.7" maxW="600px">
+          <Text fontSize="md" color="whiteAlpha.800" lineHeight="1.7" maxW="600px">
             {t('capabilities.description')}
           </Text>
         </Box>
@@ -126,11 +126,11 @@ function Capabilities() {
                   fontFamily="'Bebas Neue', 'Oswald', sans-serif"
                   fontWeight="400"
                   letterSpacing="0.05em"
-                  color="neutral.charcoal"
+                  color="white"
                 >
                   {cap.title.toUpperCase()}
                 </Heading>
-                <Text fontSize="sm" color="neutral.stone" lineHeight="1.7">
+                <Text fontSize="sm" color="whiteAlpha.800" lineHeight="1.7">
                   {cap.description}
                 </Text>
               </VStack>
