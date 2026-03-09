@@ -65,8 +65,6 @@ function ZavayaCarousel({ embedded = false }) {
   if (embedded) {
     return (
       <Box
-        ref={carouselRef}
-        className="reveal"
         position="relative"
         w="105%"
         mx="-2.5%"
@@ -172,10 +170,10 @@ function ZavayaCarousel({ embedded = false }) {
               w={index === current ? '24px' : '8px'}
               h="8px"
               borderRadius="full"
-              bg={index === current ? 'accent.leaf' : 'whiteAlpha.400'}
+              bg={index === current ? 'brand.forest' : 'blackAlpha.500'}
               transition="all 0.3s"
               cursor="pointer"
-              _hover={{ bg: index === current ? 'accent.leaf' : 'whiteAlpha.600' }}
+              _hover={{ bg: index === current ? 'brand.forestLight' : 'blackAlpha.700' }}
               aria-label={`Go to image ${index + 1}`}
             />
           ))}
