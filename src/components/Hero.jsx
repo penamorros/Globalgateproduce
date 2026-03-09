@@ -18,7 +18,7 @@ import {
 } from '@chakra-ui/react'
 import { Link as RouterLink } from 'react-router-dom'
 
-import heroAvocado from '../assets/images/hero-avocado-large.png'
+import heroAvocado from '../assets/images/hero-avocado-large.webp'
 import { useReveal } from '../hooks/useReveal'
 import { useLanguage } from '../context/LanguageContext'
 
