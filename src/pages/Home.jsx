@@ -12,6 +12,7 @@ import Hero from '../components/Hero'
 import ExportScale from '../components/ExportScale'
 import Capabilities from '../components/Capabilities'
 import ProductFocus from '../components/ProductFocus'
+import BananitaSection from '../components/BananitaSection'
 import Quality from '../components/Quality'
 import ContactForm from '../components/ContactForm'
 import Footer, { Tagline } from '../components/Footer'
@@ -26,6 +27,7 @@ function Home() {
         <ExportScale />
         <Capabilities />
         <ProductFocus />
+        <BananitaSection />
         <Quality />
         <ContactForm />
       </Box>
