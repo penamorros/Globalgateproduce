@@ -19,6 +19,7 @@ import { Link as RouterLink } from 'react-router-dom'
 
 import Header from '../components/Header'
 import Footer, { Tagline } from '../components/Footer'
+import BananitaSection from '../components/BananitaSection'
 import { useLanguage } from '../context/LanguageContext'
 import { useReveal, useStaggerReveal } from '../hooks/useReveal'
 
@@ -390,6 +391,8 @@ function Products() {
             </Text>
           </Container>
         </Box>
+
+        <BananitaSection />
       </Box>
 
       <Tagline />
