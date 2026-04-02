@@ -125,9 +125,9 @@ const translations = {
 
     // Bananita section
     'bananita.label': 'Grupo Zavaya',
-    'bananita.title': 'Freeze-Dried Program Visuals',
+    'bananita.title': 'Guacamoles y IQF',
     'bananita.description': 'Client review material updated from legacy Avocomex references to Grupo Zavaya branding, including brochure and product visuals for freeze-dried avocado presentations.',
-    'bananita.brochureCta': 'Open Grupo Zavaya Brochure (PDF)',
+    'bananita.brochureCta': 'Open Guacamoles y IQF Brochure (PDF)',
 
     // Footer
     'footer.description': 'Avocados, dragon fruit, and tropicals from Mexico. Women-owned, Rio Grande Valley–based.',
@@ -251,9 +251,9 @@ const translations = {
 
     // Bananita section
     'bananita.label': 'Grupo Zavaya',
-    'bananita.title': 'Visuales de Programa Liofilizado',
+    'bananita.title': 'Guacamoles y IQF',
     'bananita.description': 'Material de revisión de cliente actualizado desde referencias legadas de Avocomex hacia branding de Grupo Zavaya, incluyendo díptico y visuales de producto para presentaciones de aguacate liofilizado.',
-    'bananita.brochureCta': 'Abrir Díptico Grupo Zavaya (PDF)',
+    'bananita.brochureCta': 'Open Guacamoles y IQF Brochure (PDF)',
 
     // Footer
     'footer.description': 'Aguacates, pitahaya y tropicales de México. Empresa de mujeres, con sede en el Valle del Río Grande.',
